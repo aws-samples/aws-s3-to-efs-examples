@@ -45,3 +45,7 @@ This stack uses [AWS DataSync](https://docs.aws.amazon.com/datasync/latest/userg
       ```npm run deploy -- aws-s3-to-efs-via-datasync```
 
    
+### Viewing files in EFS
+
+See [Simple File Manager for Amazon EFS
+](https://aws.amazon.com/solutions/implementations/simple-file-manager-for-amazon-efs/)
