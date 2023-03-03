@@ -1,6 +1,6 @@
 # aws-s3-to-efs
 
-This Typescript CDK project containers two example stacks demonstrating how you can transfer files from S3 to EFS
+This Typescript CDK project contains two example stacks demonstrating how you can transfer files from S3 to EFS
 
 ## aws-s3-to-efs-via-lambda
 

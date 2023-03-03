@@ -26,7 +26,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   appEntrypoint: 'lib/infrastructure/app',
   name: 'aws-s3-to-efs',
   packageManager: NodePackageManager.NPM,
-  gitignore: ['.DS_STORE', '.idea', '*.iml', '*.bkp', '*.dtmp','*.out.txt'],
+  gitignore: ['.DS_STORE', '.idea', '*.iml', '*.bkp', '*.dtmp','*.out.txt','cdk.context.json'],
   deps: ['@types/aws-lambda', '@aws-lambda-powertools/logger', '@aws-sdk/client-s3'],
   devDeps: ['cdk-nag'],
   license: 'MIT-0',
