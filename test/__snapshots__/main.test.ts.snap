@@ -133,6 +133,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
       "Type": "AWS::Lambda::Function",
     },
     "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC": {
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-IAM4",
+              "reason": "AWS managed policies acceptable here",
+            },
+          ],
+        },
+      },
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -164,6 +174,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
       "Type": "AWS::IAM::Role",
     },
     "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36": {
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-IAM5",
+              "reason": "The IAM entity in this example contain wildcard permissions. In a real world production workload it is recommended adhering to AWS security best practices regarding least-privilege permissions (https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) ",
+            },
+          ],
+        },
+      },
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -384,7 +404,7 @@ def submit_response(event: dict, context, response_status: str, error_message: s
           "S3Bucket": {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "82dc108af878901ddf1bdbed23a4cd598d0dcd9fb1081da354409b42b5074dcb.zip",
+          "S3Key": "bcb6407aca7de508e8613402e9910c8d71d77a4471466be5444114c6966147ff.zip",
         },
         "Environment": {
           "Variables": {
@@ -484,6 +504,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
         "vpcprivateegressSubnet2DefaultRoute48C96327",
         "vpcprivateegressSubnet2RouteTableAssociation41333E50",
       ],
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-IAM4",
+              "reason": "AWS managed policies acceptable here",
+            },
+          ],
+        },
+      },
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -535,6 +565,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
         "vpcprivateegressSubnet2DefaultRoute48C96327",
         "vpcprivateegressSubnet2RouteTableAssociation41333E50",
       ],
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-IAM5",
+              "reason": "The IAM entity in this example contain wildcard permissions. In a real world production workload it is recommended adhering to AWS security best practices regarding least-privilege permissions (https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) ",
+            },
+          ],
+        },
+      },
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -682,6 +722,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
     },
     "sourcebucketE323AAE3": {
       "DeletionPolicy": "Delete",
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-S1",
+              "reason": "Example bucket does not need access logs enabled",
+            },
+          ],
+        },
+      },
       "Properties": {
         "BucketEncryption": {
           "ServerSideEncryptionConfiguration": [
@@ -827,6 +877,16 @@ def submit_response(event: dict, context, response_status: str, error_message: s
       "Type": "AWS::S3::BucketPolicy",
     },
     "vpcA2121C38": {
+      "Metadata": {
+        "cdk_nag": {
+          "rules_to_suppress": [
+            {
+              "id": "AwsSolutions-VPC7",
+              "reason": "This VPC is for the example only and should not be used in production workloads, no need to enabled VPC flow logs",
+            },
+          ],
+        },
+      },
       "Properties": {
         "CidrBlock": "10.0.0.0/16",
         "EnableDnsHostnames": true,

@@ -35,6 +35,7 @@ jspm_packages/
 *.iml
 *.bkp
 *.dtmp
+*.out.txt
 !/.projenrc.js
 /test-reports/
 junit.xml

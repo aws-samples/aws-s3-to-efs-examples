@@ -145,11 +145,8 @@
       "error",
       {
         "devDependencies": [
-          "**/test/**",
-          "**/build-tools/**"
-        ],
-        "optionalDependencies": false,
-        "peerDependencies": true
+          "**/infrastructure/*.ts"
+        ]
       }
     ],
     "import/no-unresolved": [

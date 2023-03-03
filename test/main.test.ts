@@ -1,6 +1,6 @@
 import { App } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { S3ToEFViaLambdaExample } from '../src/main';
+import { S3ToEFViaLambdaExample } from '../src/lib/infrastructure/app';
 
 test('Snapshot', () => {
   const app = new App();
