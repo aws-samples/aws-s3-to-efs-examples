@@ -1,17 +1,51 @@
-## My Project
+# aws-s3-to-efs
 
-TODO: Fill this README out!
+This Typescript CDK project contains two example stacks demonstrating how you can transfer files from S3 to EFS
 
-Be sure to:
+## aws-s3-to-efs-via-lambda
 
-* Change the title in this README
-* Edit your repository description on GitHub
+This stack use S3 events to trigger a lambda function with an EFS filesystem mount to read the files from S3 and write them to EFS.
 
-## Security
+![aws-s3-to-efs-via-lambda](./images/aws-s3-to-efs-via-lambda.drawio.png)
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+## aws-s3-to-efs-via-datasync
 
-## License
+This stack uses [AWS DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html) to transfer files between S3 and EFS
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+![aws-s3-to-efs-via-datasync](./images/aws-s3-to-efs-via-datasync.drawio.png)
 
+
+
+## Prerequisites
+
+1. Install [NodeJS](https://nodejs.org/en/download/)
+1. Install latest [AWS CDK Toolkit](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
+   1. [Bootstrap](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_bootstrap) you AWS Account (only needs to be done once per account/region/role )
+
+## Deploy
+
+* Install python dependencies
+
+  ```npm install```
+
+* Build the project
+
+  ```npm run build```
+
+  * Deploy to AWS
+
+    (You'll need AWS credentials on the terminal for this to run correctly)
+
+    * **aws-s3-to-efs-via-lambda**
+
+      ```npm run deploy --  aws-s3-to-efs-via-lambda```
+    
+    * **aws-s3-to-efs-via-datasync**
+
+      ```npm run deploy -- aws-s3-to-efs-via-datasync```
+
+   
+### Viewing files in EFS
+
+See [Simple File Manager for Amazon EFS
+](https://aws.amazon.com/solutions/implementations/simple-file-manager-for-amazon-efs/)
